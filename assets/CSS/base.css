@@ -1,0 +1,126 @@
+:root {
+  --primary-color: #d0011b;
+  --primary-orange: #ee4d2d;
+  --text-color: #000000cc;
+  --text-gray: #000000a6;
+  --text-light-gray: #0000008a;
+  --white-color: #fff;
+  --header-tablet-height: 8.5rem;
+  --header-mobile-height: 5.6rem;
+  --header-category-height: 4.2rem;
+}
+* {
+  box-sizing: inherit;
+}
+body::-webkit-scrollbar {
+  display: none;
+}
+/* Remove input numberic updown arrow */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+/* ---------------------------------- */
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  font-family: Arial, Helvetica, sans-serif;
+  scroll-behavior: smooth;
+}
+a {
+  user-select: none;
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+}
+button {
+  cursor: pointer;
+  user-select: none;
+}
+.flex {
+  display: flex;
+}
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.flex-align-center {
+  display: flex;
+  align-items: center;
+}
+.flex-center-space {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.pos-rlt {
+  position: relative;
+}
+.text-orange {
+  color: var(--primary-orange);
+}
+.capitalize {
+  text-transform: capitalize;
+}
+.border-top-clear {
+  border-top-left-radius: 0.2rem;
+  border-top-right-radius: 0.2rem;
+}
+.border-bottom-clear {
+  border-bottom-left-radius: 0.2rem;
+  border-bottom-right-radius: 0.2rem;
+}
+.hov-background:hover {
+  background-color: #f8f8f8;
+}
+.hov-op:hover {
+  opacity: 0.7;
+  cursor: pointer;
+}
+.pointer {
+  cursor: pointer;
+}
+/* Drawer menu */
+.drawer::before {
+  content: "";
+  position: absolute;
+}
+.drawer {
+  position: absolute;
+  background-color: var(--white-color);
+  border-radius: 0.2rem;
+  box-shadow: 0 0 0.5rem 0.2rem #00000017;
+  transform: scale(0);
+  opacity: 0;
+  transition: all ease 0.2s;
+}
+.drawer::after {
+  content: "";
+  position: absolute;
+  border-left: 1.2rem solid transparent;
+  border-right: 1.2rem solid transparent;
+  border-bottom: 1rem solid var(--white-color);
+}
+/* ----------- */
+.page-controller__list {
+  margin: 4rem 0;
+}
+.page-controller__item-link {
+  display: block;
+  margin: 0 1.5rem;
+  padding: 0.5rem 1.4rem;
+  font-size: 2rem;
+  color: #00000066;
+}
+.page-controller__item-link--active {
+  color: var(--white-color);
+  background-color: var(--primary-color);
+  border-radius: 0.2rem;
+}
+.page-controller__item-link--active:hover {
+  opacity: 0.7;
+}
